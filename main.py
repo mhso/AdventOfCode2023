@@ -21,10 +21,10 @@ try:
             # Create new .py file
             print(f"Generating placeholder file at {code_path}...")
             with open(code_path, "w", encoding="utf-8") as fp:
-                fp.write("def part_1(input_text):\n")
-                fp.write("    print(input_text)\n\n")
-                fp.write("def part_2(input_text):\n")
-                fp.write("    print(input_text)\n")
+                fp.write("def part_1(input_lines):\n")
+                fp.write("    print(input_lines)\n\n")
+                fp.write("def part_2(input_lines):\n")
+                fp.write("    print(input_lines)\n")
 
         input_path = f"inputs/day{args.day}.txt"
         if os.path.exists(input_path):
