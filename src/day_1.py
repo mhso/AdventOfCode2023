@@ -1,6 +1,6 @@
-def part_1(input_text):
+def part_1(input_lines):
     result = 0
-    for line in input_text:
+    for line in input_lines:
         first = None
         prev_match = None
         for c in line:
@@ -15,7 +15,7 @@ def part_1(input_text):
     print(result)
 
 
-def part_2(input_text):
+def part_2(input_lines):
     result = 0
     keywords = [
         "one",
@@ -45,7 +45,7 @@ def part_2(input_text):
         except ValueError:
             return str(keywords.index(v) + 1)
 
-    for line in input_text:
+    for line in input_lines:
         first = None
         best_match_first = len(line)
         last = None
