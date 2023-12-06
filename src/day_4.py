@@ -29,10 +29,10 @@ def part_2(input_lines):
         pending_cards.append(card_num)
         winning_card_nums.append(len(winning_nums))
 
-    num_cards = len(pending_cards)
+    result = len(pending_cards)
     while pending_cards != []:
         card = pending_cards.pop()
         pending_cards.extend(range(card + 1, card + winning_card_nums[card] + 1))
-        num_cards += winning_card_nums[card]
+        result += winning_card_nums[card]
 
-    print(num_cards)
+    print(result)
